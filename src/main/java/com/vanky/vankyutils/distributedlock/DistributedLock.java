@@ -20,4 +20,20 @@ public interface DistributedLock extends AutoClosableDistributedLock {
      * @return
      */
     boolean unlock(String key);
+
+    /**
+     * 加锁支持设置值
+     * @param key 锁对应键
+     * @param value 锁对应值
+     * @return
+     */
+    boolean lock(String key, String value);
+
+    /**
+     * 解锁需要键值对应
+     * @param key 锁对应键
+     * @param value 锁对应值
+     * @return
+     */
+    boolean unlock(String key, String value);
 }
